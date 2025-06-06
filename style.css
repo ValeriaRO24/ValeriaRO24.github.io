@@ -1,0 +1,404 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Lato'; /* default, swap fonts below */
+    background-color: #FFFFFF; /* White background */
+    color: #565857; /* Dark gray text */
+    line-height: 1.6;
+    padding-bottom: 100px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #022B3A; /* Dark mauve */
+    font-family: 'Lato', sans-serif;
+    color: #BFDBF7; /* Light gray */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem; /* taller header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(115, 75, 94, 0.3);
+  }
+  
+  .logo img {
+    height: 60px; /* slightly bigger */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: #E1E5F2; /* Light gray */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  .nav-links a:hover {
+    color: #8A8D91; /* Medium gray */
+    text-decoration: underline;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ACA9B6; /* Light gray background */
+    margin: 3rem auto; /* center horizontally */
+    max-width: 900px; /* limit width */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(115, 75, 94, 0.2);
+    gap: 2rem;
+    color: #565857; /* Dark gray */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .profile-image {
+    float: left; /* or float: right; */
+    margin-right: 0.1rem; /* spacing between image and text */
+    margin-bottom: 13rem;
+  }
+  
+  .profile-image img {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #734B5E;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bio h1 {
+    font-size: 3rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+    
+    color: #734B5E; /* Dark mauve */
+    
+  }
+  
+  
+  
+  /* Section Containers */
+  .research,
+  .external-links,
+  .contact-form {
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background-color: #c7c9cd; /* Light gray */
+    border-left: 5px solid #734B5E; /* Dark mauve accent */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(115, 75, 94, 0.15);
+    color: #565857; /* Dark gray */
+    max-width: 900px; /* limit width and center */
+    position: relative;
+   
+    z-index: 1;
+  }
+  
+  /* Lists */
+  .research ul,
+  .external-links ul {
+    list-style: square inside;
+    margin-top: 1rem;
+  }
+  
+  .external-links a {
+    color: #565857; /* Dark gray */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .external-links a:hover {
+    color: #734B5E; /* Dark mauve */
+    text-decoration: underline;
+  }
+  
+  /* Contact Form */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #734B5E; /* Dark mauve */
+    background-color: #FFFFFF; /* White */
+    color: #565857; /* Dark gray */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* limit input width */
+    margin: 0 auto; /* center inputs */
+    display: block;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #8A8D91; /* Medium gray */
+  }
+  
+  .contact-form button {
+    background-color: #734B5E; /* Dark mauve */
+    color: #BCBDC0; /* Light gray */
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .contact-form button:hover {
+    background-color: #565857; /* Dark gray */
+    color: #FFFFFF;
+  }
+  
+  /* Google Form Embed */
+  .google-form {
+    margin-top: 1rem;
+    border: 1px solid #734B5E;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(115, 75, 94, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #022B3A; /* Dark mauve */
+    color: #BCBDC0; /* Light gray */
+    padding: 1rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .footer-logo {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+  }
+
+
+
+
+
+  .background-circles {
+    position: fixed; /* fixed so it stays while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* so clicks pass through */
+    overflow: visible;
+    z-index: 0; /* behind all content */
+    
+  }
+  
+  .background-circles .circle {
+    position: absolute;
+    background-color: #1F7A8C; /* maroon */
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeInCircle 2s ease forwards;
+    
+  }
+  
+  /* Large circles with different sizes and positions */
+  .background-circles .circle1 {
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    left: -150px;
+  }
+  
+  .background-circles .circle2 {
+    width: 600px;
+    height: 600px;
+    top: 40%;
+    left: 60%;
+    animation-delay: 0.5s;
+  }
+  
+  .background-circles .circle3 {
+    width: 500px;
+    height: 500px;
+    top: 75%;
+    left: 20%;
+    animation-delay: 1s;
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeInCircle {
+    to {
+      opacity: 0.10; /* subtle, light */
+    }
+  }
+  
+  /* Adjust circles on smaller screens */
+  @media (max-width: 768px) {
+    .background-circles .circle1 {
+      width: 300px;
+      height: 300px;
+      top: 15%;
+      left: 5%;
+    }
+    .background-circles .circle2 {
+      width: 400px;
+      height: 400px;
+      top: 55%;
+      left: 55%;
+    }
+    .background-circles .circle3 {
+      width: 350px;
+      height: 350px;
+      top: 80%;
+      left: 25%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .background-circles .circle {
+      display: none; /* hide circles on small screens for clarity */
+    }
+  }
+  
+
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+
+    position: relative; /* for dropdown positioning */
+  }
+  
+  .nav-links > li {
+    position: relative; /* needed for dropdown */
+  }
+  
+  .nav-links a, .nav-links .dropbtn {
+    color: #E1E5F2; /* Light gray */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.5rem 0; /* keep vertical padding consistent */
+    display: inline-block;
+  }
+  
+  /* Hover styles for links */
+  .nav-links a:hover,
+  .nav-links .dropbtn:hover {
+    color: #8A8D91; /* Medium gray */
+    text-decoration: underline;
+  }
+  
+  /* Dropdown container */
+  .nav-links .dropdown-content {
+    top: 100%;  /* exactly below parent */
+    margin-top: 0; /* no gap */
+    left: 0; /* or right: 0 based on your design */
+
+    display: none;
+    position: absolute;
+    background-color: #ACA9B6; /* Dark mauve */
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(115, 75, 94, 0.3);
+    min-width: 160px;
+    margin-top: 4px; /* VERY small gap to reduce delay */
+    padding: 0;
+    z-index: 1500;
+    right: 0; /* align right side of dropdown with parent */
+  }
+  
+  /* Dropdown list items */
+  .nav-links .dropdown-content li {
+    list-style: none;
+  }
+  
+  /* Dropdown links */
+  .nav-links .dropdown-content li a {
+    color: #4f3541; /* Light gray */
+    padding: 10px 16px;
+    display: block;
+    font-weight: normal;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  /* Hover styles for dropdown items */
+  .nav-links .dropdown-content li a:hover {
+    background-color: #8A8D91; /* Medium gray */
+    color: #fff;
+  }
+  
+  /* Show dropdown on hover */
+  .nav-links .dropdown:hover .dropdown-content,
+  .nav-links .dropdown-content:hover {
+    display: block;
+  }
+  
+  
+
+
+
+  
+  
+  
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    
+    position: relative;
+    z-index: 1;
+  }
+  
+  .external-button {
+    background-color: #734B5E; /* Dark mauve */
+    width: 270px;
+    height: 55px;
+    color: #E1E5F2;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(115, 75, 94, 0.2);
+    text-align: center;  
+  }
+  
+  .external-button:hover {
+    background-color: #8A8D91;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+  }
+  

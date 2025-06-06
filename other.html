@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | My Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+
+
+</head>
+<body>
+
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+      </div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/logo-top.png" alt="Logo Coming Soon" />
+    </div>
+    <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="tutoring.html">Tutoring</a></li>
+          <li><a href="other.html">Creative Endeavours</a></li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Professional Experience ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="assets/ResumeVRO.pdf" target="_blank" rel="noopener">Resume</a></li>
+              <li><a href="assets/CVVRO.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+
+ 
+
+    <section class="research">
+        <h2 style="color: #734B5E;">Creatie Endeavours</h2>
+      <ul>
+        
+        Coming soon!
+        
+      </ul>
+
+       
+    </section>
+
+
+
+
+      
+
+
+      
+
+      
+
+ 
+ 
+      
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Valeria Ramirez Osorio</p>
+    <div class="footer-logo">
+      <img src="assets/logo-bottom.png" alt="Logo" />
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownContent = dropdown.querySelector('.dropdown-content');
+      let timeout;
+  
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        dropdownContent.style.display = 'block';
+      });
+  
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300); // stays visible for 300ms after mouse leaves
+      });
+  
+      dropdownContent.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+      });
+  
+      dropdownContent.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300);
+      });
+    });
+  </script>
+
+
+</body>
+</html>
+

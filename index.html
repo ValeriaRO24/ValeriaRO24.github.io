@@ -3,29 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>About Me | My Website</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+
+
 </head>
 <body>
+
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+      </div>
+
   <header>
+    <div class="logo">
+      <img src="assets/logo-top.png" alt="Logo coming soon" />
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">About</a></li>
-        <li><a href="publication.html">Projects</a></li>
-        <li><a href="tutoring.html">Blog</a></li>
-        <li><a href="other.html">Contact</a></li>
-      </ul>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="tutoring.html">Tutoring</a></li>
+          <li><a href="other.html">Creative Endeavours</a></li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Professional Experience ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="assets/ResumeVRO.pdf" target="_blank" rel="noopener">Resume</a></li>
+              <li><a href="assets/CVVRO.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
   </header>
 
   <main>
-    <h1>Welcome to My Website</h1>
-    <p>This is the homepage. Feel free to explore!</p>
+
+ 
+   
+    <section class="about-section">
+      <div class="profile-image">
+        <img src="assets/profile_photo.jpg" alt="Your Photo" />
+      </div>
+      <div class="bio">
+        <h1 class="animate__animated animate__fadeInRight">Valeria Ramirez Osorio</h1>
+        <p>
+          Welcome to my academic and professional space! I am currently an undergraduate at the University of Toronto, pursuing a Specialist in Computer Science with a Mathematics Minor. I am soon to complete my semester abroad at the University of Granada in Granada, Spain. Then I am on track to continue my academic journey at the University of McMaster with a Masters in Engineering.
+          <br>
+          <br>
+          Apart from my academic background, I&apos;m a creative person always looking for a new outlet—whether it&apos;s through visual arts or writing, as reflected in my Creative Endeavours page. I&apos;m also a proud activist for feminist rights and deeply committed to promoting equity and inclusion in and outside academic spaces. In addition to English, I speak Spanish fluently and have intermediate proficiency in French, which allows me to engage with diverse communities and perspectives.
+          <br>
+          <br>
+          I&apos;m excited to share my academic journey, projects, and passions with you through this space. Thanks for stopping by—feel free to explore and connect!
+        </p>
+      </div>
+    </section>
+
+    <section class="research">
+      <h2>Research Interests</h2>
+      <ul>
+        Throughout my academic journey, I&apos;ve developed a strong interest in the field of Human-Computer Interaction, with a particular focus on how artificial intelligence can support and enhance human life—especially when applied thoughtfully and responsibly. I&apos;m especially drawn to the intersection of AI and computer science education, and how emerging technologies are reshaping the way we teach, learn, and engage with digital tools.
+
+            My research also explores the psychological dimensions of educational technology—how students and educators interact with intelligent systems, and how those experiences can be improved. In addition to these core interests, I&apos;m passionate about supporting this work through robust software development practices and the effective use of tools like databases and educational platforms.
+      </ul>
+    </section>
+
+
+    <div class="button-group">
+        <a href="https://github.com/ValeriaRO24" target="_blank" class="external-button">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
+        </a>
+        <a href="www.linkedin.com/in/valeria-ramirez-osorio" target="_blank" class="external-button">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="https://scholar.google.com/citations?user=hlp5djYAAAAJ&hl=en" target="_blank" class="external-button">
+          <!-- Google Scholar doesn't have official FA icon, so use a book icon or something similar -->
+          <i class="fas fa-graduation-cap" aria-hidden="true"></i> Google Scholar
+        </a>
+      </div>
+   
+
+    <section class="contact-form">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out using the form below. I'll get back to you as soon as possible!</p>
+      
+        <form 
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfUjEhmRCB4zw2xwQLKu-VqVUohOivAVxw1inW0uiZV9pG-Tw/formResponse" 
+          method="POST" 
+          target="hidden_iframe"
+          onsubmit="alert('Thank you! Your message was sent.');"
+          class="styled-form"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="entry.2005620554" id="name" placeholder="Your name" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="entry.1045781291" id="email" placeholder="you@example.com" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="entry.1166974658" id="phone" placeholder="(Optional)" />
+          </div>
+      
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="entry.839337160" id="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+      
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      
   </main>
 
   <footer>
-    <p>&copy; 2025 My Website</p>
+    <p>&copy; 2025 Valeria Ramirez Osorio </p>
+    <div class="footer-logo">
+      <img src="assets/logo-bottom.png" alt="Logo Coming Soon" />
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownContent = dropdown.querySelector('.dropdown-content');
+      let timeout;
+  
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        dropdownContent.style.display = 'block';
+      });
+  
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300); // stays visible for 300ms after mouse leaves
+      });
+  
+      dropdownContent.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+      });
+  
+      dropdownContent.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300);
+      });
+    });
+  </script>
+  
 </body>
 </html>
+
