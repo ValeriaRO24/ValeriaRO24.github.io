@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | My Website</title>
+  <title>Creative Endeavours | Valeria Ramirez Osorio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
 
@@ -27,7 +27,7 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="tutoring.html">Tutoring</a></li>
-          <li><a href="other.html">Creative Endeavours</a></li>
+          <li><a style="color: #8A8D91;"  href="other.html">Creative Endeavours</a></li>
           
           <li class="dropdown">
             <a href="#" class="dropbtn">Professional Experience ▼</a>
@@ -45,15 +45,170 @@
  
 
     <section class="research">
-        <h2 style="color: #734B5E;">Creatie Endeavours</h2>
+        <h2 style="color: #034259;">Writing</h2>
       <ul>
         
-        Coming soon!
+        <section>
+  
+  <iframe 
+    src="https://themedium.ca/the-underrated-phenomenon-that-is-women-in-stem/" 
+    display: flex; 
+    justify-content: center;
+    width="90%" 
+    height="400px" 
+    style="border: none;"
+    title="Wikipedia Preview">
+  </iframe>
+
+
+<br>
+<br>
+<section>
+  
+  <iframe 
+    src="https://themedium.ca/the-queer-narrative-in-aristotle-and-dante-discover-the-secrets-of-the-universe/" 
+    width="90%" 
+    height="400px" 
+    style="border: none;"
+    title="Wikipedia Preview">
+  </iframe>
+</section>
         
       </ul>
 
        
     </section>
+
+    <section class="research">
+        <h2 style="color: #034259;">Visual Arts</h2>
+      <ul>
+
+        <h2 style="text-align: center; color: #035a7a; margin-bottom: 1rem;">
+  Rainbow-Monochromatic Collection, Medium: Digital
+</h2>
+        
+        <style>
+  .carousel-container {
+    width: 70%;
+    max-width: 400px;
+    margin: 2rem auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+  }
+
+  .carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+  }
+
+  .carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<div class="carousel-container">
+  <div class="carousel-track" id="carouselTrack1">
+    <div class="carousel-slide"><img src="/assets/art1.PNG" alt="Image 1" /></div>
+    <div class="carousel-slide"><img src="/assets/art2.PNG" alt="Image 2" /></div>
+    <div class="carousel-slide"><img src="/assets/art3.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art4.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art5.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art6.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art7.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art8.PNG" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/art9.PNG" alt="Image 3" /></div>
+    <!-- Add more slides as needed -->
+  </div>
+  <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide('carouselTrack1', -1)">❮</button>
+    <button class="carousel-button" onclick="moveSlide('carouselTrack1', 1)">❯</button>
+  </div>
+</div>
+
+
+<h2 style="text-align: center; color: #035a7a; margin-bottom: 1rem;">
+  Arylic Collection
+</h2>
+<div class="carousel-container">
+  <div class="carousel-track" id="carouselTrack2">
+    <div class="carousel-slide"><img src="/assets/a12.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a1.jpg" alt="Image 1" /></div>
+    <div class="carousel-slide"><img src="/assets/a11.jpg" alt="Image 2" /></div>
+    <div class="carousel-slide"><img src="/assets/a2.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a3.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a8.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a9.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a10.jpg" alt="Image 3" /></div>
+    <div class="carousel-slide"><img src="/assets/a13.jpg" alt="Image 3" /></div>
+    <!-- Add more slides as needed -->
+  </div>
+  <div class="carousel-buttons">
+       <button class="carousel-button" onclick="moveSlide('carouselTrack2', -1)">❮</button>
+    <button class="carousel-button" onclick="moveSlide('carouselTrack2', 1)">❯</button>
+  </div>
+</div>
+
+
+<script>
+  const slideIndexes = {};
+
+  function moveSlide(trackId, direction) {
+    const track = document.getElementById(trackId);
+    const slides = track.children.length;
+
+    // Initialize index if not present
+    if (!(trackId in slideIndexes)) {
+      slideIndexes[trackId] = 0;
+    }
+
+    // Update index and apply transform
+    slideIndexes[trackId] = (slideIndexes[trackId] + direction + slides) % slides;
+    track.style.transform = `translateX(-${slideIndexes[trackId] * 100}%)`;
+  }
+</script>
+
+        
+      </ul>
+
+       
+    </section>
+
 
 
 

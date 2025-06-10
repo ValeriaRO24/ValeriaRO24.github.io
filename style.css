@@ -56,7 +56,7 @@
     display: flex;
     align-items: center;
     padding: 2rem;
-    background-color: #ACA9B6; /* Light gray background */
+    background-color: #c8c8c9; /* Light gray background */
     margin: 3rem auto; /* center horizontally */
     max-width: 900px; /* limit width */
     border-radius: 12px;
@@ -78,17 +78,17 @@
     height: 210px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #734B5E;
+    border: 3px solid #034259;;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
   
   .bio h1 {
     font-size: 3rem;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-weight: 100;
     margin-bottom: 0.5rem;
     
-    color: #734B5E; /* Dark mauve */
+    color: #1F7A8C; /* Dark mauve */
     
   }
   
@@ -101,7 +101,7 @@
     margin: 3rem auto;
     padding: 1.5rem;
     background-color: #c7c9cd; /* Light gray */
-    border-left: 5px solid #734B5E; /* Dark mauve accent */
+    border-left: 5px solid #1F7A8C; /* Dark mauve accent */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(115, 75, 94, 0.15);
     color: #565857; /* Dark gray */
@@ -126,7 +126,7 @@
   }
   
   .external-links a:hover {
-    color: #734B5E; /* Dark mauve */
+    color: #1F7A8C; /* Dark mauve */
     text-decoration: underline;
   }
   
@@ -140,7 +140,7 @@
   .contact-form input,
   .contact-form textarea {
     padding: 0.75rem;
-    border: 1px solid #734B5E; /* Dark mauve */
+    border: 1px solid #1F7A8C; /* Dark mauve */
     background-color: #FFFFFF; /* White */
     color: #565857; /* Dark gray */
     border-radius: 8px;
@@ -156,7 +156,7 @@
   }
   
   .contact-form button {
-    background-color: #734B5E; /* Dark mauve */
+    background-color: #1F7A8C; /* Dark mauve */
     color: #BCBDC0; /* Light gray */
     border: none;
     padding: 0.75rem 2rem;
@@ -176,7 +176,7 @@
   /* Google Form Embed */
   .google-form {
     margin-top: 1rem;
-    border: 1px solid #734B5E;
+    border: 1px solid #1F7A8C;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 6px rgba(115, 75, 94, 0.2);
@@ -381,7 +381,7 @@
   }
   
   .external-button {
-    background-color: #734B5E; /* Dark mauve */
+    background-color: #1F7A8C; /* Dark mauve */
     width: 270px;
     height: 55px;
     color: #E1E5F2;
