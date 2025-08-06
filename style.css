@@ -455,3 +455,35 @@
     flex: 1;
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-image {
+    margin: 0 auto 1rem auto;
+    float: none; /* override any float */
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .bio h1 {
+    font-size: 2rem;
+  }
+
+  .bio p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}

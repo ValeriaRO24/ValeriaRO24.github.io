@@ -6,6 +6,8 @@
   <title>Creative Endeavours | Valeria Ramirez Osorio</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 
 </head>
@@ -27,7 +29,15 @@
           <li><a href="projects.html">Projects</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="tutoring.html">Tutoring</a></li>
-          <li><a style="color: #8A8D91;"  href="other.html">Creative Endeavours</a></li>
+          <!-- <li><a style="color: #8A8D91;"  href="other.html">Creative Endeavours</a></li> -->
+
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Creative Endeavours ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="writing.html"  rel="noopener">Writing</a></li>
+              <li><a href="art.html"  rel="noopener">Visual Art</a></li>
+            </ul>
+          </li>
           
           <li class="dropdown">
             <a href="#" class="dropbtn">Professional Experience ▼</a>
@@ -259,6 +269,15 @@
           dropdownContent.style.display = 'none';
         }, 300);
       });
+    });
+  </script>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("header nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
     });
   </script>
 
