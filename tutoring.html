@@ -55,9 +55,52 @@
 
   <main>
 
+
+    
+
+   <section class="research" style="margin-bottom: 30px;"> 
+  <h2 style="color: #034259;">Table of Contents</h2>
+  <ul style="list-style-type: disc; padding-left: 0; line-height: 1.8; font-size: 1.05em;">
+    <li>
+      <a href="#english" 
+         style="text-decoration: none; color: #03697a; transition: color 0.3s;">
+         Tutoring Information - English Version
+      </a>
+    </li>
+    <li>
+      <a href="#spanish" 
+         style="text-decoration: none; color: #03697a; transition: color 0.3s;">
+         Tutoring Information - Spanish Version
+      </a>
+    </li>
+    <li>
+      <a href="#reviews" 
+         style="text-decoration: none; color: #03697a; transition: color 0.3s;">
+         Reviews and Comments
+      </a>
+    </li>
+    <li>
+      <a href="#contact" 
+         style="text-decoration: none; color: #03697a; transition: color 0.3s;">
+         Contact Me
+      </a>
+    </li>
+  </ul>
+
+  <script>
+    // Simple inline hover effect since we’re using inline styles
+    document.querySelectorAll('section.research a').forEach(link => {
+      link.addEventListener('mouseenter', () => link.style.color = '#022d3b');
+      link.addEventListener('mouseleave', () => link.style.color = '#03697a');
+    });
+  </script>
+</section>
+
+
+
  
 
-    <section class="research">
+    <section class="research" id="english" style="scroll-margin-top: 120px;">
         <h2 style="color: #034259;">Tutoring Information - English Version </h2>
         <p>Hi! </p>
 
@@ -129,7 +172,7 @@
 
       </section>
 
-      <section class="research">
+      <section class="research" id="spanish" style="scroll-margin-top: 120px;">
         <h2 style="color: #034259;">Información sobre Tutorías - Versión en Español</h2>
         <p>¡Hola!</p>
       
@@ -193,9 +236,69 @@
   ¡Será un gusto saber de ti!
 </p>
 </section>
+
+<section class="research" id="reviews" style="scroll-margin-top: 120px;">
+  <h2 style="color: #034259;">Reviews and Comments</h2>
+  
+  
+
+  <div id="reviewsContainer" 
+       style="margin-top: 20px; background: #f6f9fa; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    Loading reviews...
+  </div>
+
+  <script>
+  fetch("https://script.google.com/macros/s/AKfycbwu1Whzp7_2ByypTb6faILcCQkzihGeFmSA_eb211NiUHxmsF20j7gXOl9ZjraDs5kM/exec")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("reviewsContainer");
+      container.innerHTML = "";
+
+      if (!Array.isArray(data) || data.length === 0) {
+        container.innerHTML = "<p>No reviews yet — be the first to leave one!</p>";
+        return;
+      }
+
+      data.slice().reverse().forEach(row => {
+        const name = row['Name'] || "";
+        const rating = row['Rating'] || "";
+        const comment = row['Comments']?.trim() || "";
+
+        if (!comment) return; // skip empty comments
+
+        const stars = rating ? "⭐️".repeat(Number(rating)) : "";
+
+        const commentBox = document.createElement("div");
+        commentBox.style.marginBottom = "20px";
+        commentBox.style.padding = "10px";
+        commentBox.style.borderLeft = "4px solid #03697a";
+        commentBox.style.background = "#fff";
+        commentBox.style.borderRadius = "8px";
+        commentBox.innerHTML = `
+          <p style="font-weight:bold; color:#034259; margin-bottom: 5px;">${name}</p>
+          <p style="color:#e3b505; margin: 0;">${stars}</p>
+          <p style="color:#333; margin-top: 5px;">${comment}</p>
+        `;
+        container.appendChild(commentBox);
+      });
+    })
+    .catch(err => {
+      document.getElementById("reviewsContainer").innerText = "Unable to load reviews at this time.";
+      console.error(err);
+    });
+</script>
+
+<h3 style="color: #034259; margin-top: 40px;">Add Your Own Review!</h3>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIN1pLmBU76pXP7pujFrx3bSQEu-ulSlHRl_Y72DvkhRNBWQ/viewform?embedded=true" width="800" height="300" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+</section>
+
+
+
       
 
-      <section class="contact-form">
+      <section class="contact-form" id="contact" style="scroll-margin-top: 120px;">
         <h2>Contact Me</h2>
         <p>Feel free to reach out using the form below. I'll get back to you as soon as possible!</p>
       
@@ -230,6 +333,8 @@
         </form>
       </section>
 
+
+      
 
 
 
