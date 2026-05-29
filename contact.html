@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Information | Valeria Ramirez Osorio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+
+</head>
+<body>
+
+    <div class="background-circles">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+      </div>
+
+  <header>
+    <div class="logo">
+      <img src="/assets/logo.png" alt="Logo Coming Soon" />
+    </div>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+          <a  href="projects.html" class="dropbtn">Projects ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="projects.html" rel="noopener">All Projects</a></li>
+            <li><a href="presentations.html" rel="noopener">Presentations</a></li>
+          </ul>
+        </li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="tutoring.html">Tutoring</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Creative Endeavours ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="writing.html"  rel="noopener">Writing</a></li>
+              <li><a href="art.html"  rel="noopener">Visual Art</a></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Professional Experience ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="assets/ResumeVRO.pdf" target="_blank" rel="noopener">Resume</a></li>
+              <li><a href="assets/CVVRO.pdf" target="_blank" rel="noopener">CV</a></li>
+            </ul>
+          </li>
+        </ul>
+        <li><a style="color: #8A8D91;" href="contact.html">Contact</a></li>
+
+      </nav>
+  </header>
+
+  <main>
+
+ 
+
+
+
+</section>
+
+
+
+      
+
+      <section class="contact-form" id="contact" style="scroll-margin-top: 120px;">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out using the form below. I'll get back to you as soon as possible!</p>
+        <p> Or reach out directly at valeria.j.ramirez@gmail.com</p>
+
+        <div class="button-group">
+      <a href="https://www.linkedin.com/in/valeria-ramirez-osorio" target="_blank" class="external-button">
+  <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+</a>
+        
+      </div>
+
+      
+        <form 
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfUjEhmRCB4zw2xwQLKu-VqVUohOivAVxw1inW0uiZV9pG-Tw/formResponse" 
+          method="POST" 
+          target="hidden_iframe"
+          onsubmit="alert('Thank you! Your message was sent.');"
+          class="styled-form"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="entry.2005620554" id="name" placeholder="Your name" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="entry.1045781291" id="email" placeholder="you@example.com" required />
+          </div>
+      
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="entry.1166974658" id="phone" placeholder="(Optional)" />
+          </div>
+      
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="entry.839337160" id="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+      
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+
+      
+
+
+
+      
+
+
+      
+
+      
+
+ 
+ 
+      
+      
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Valeria Ramirez Osorio</p>
+    <div class="footer-logo">
+      <img src="/assets/logo.png" alt="Logo" />
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownContent = dropdown.querySelector('.dropdown-content');
+      let timeout;
+  
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        dropdownContent.style.display = 'block';
+      });
+  
+      dropdown.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300); // stays visible for 300ms after mouse leaves
+      });
+  
+      dropdownContent.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+      });
+  
+      dropdownContent.addEventListener('mouseleave', () => {
+        timeout = setTimeout(() => {
+          dropdownContent.style.display = 'none';
+        }, 300);
+      });
+    });
+  </script>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("header nav");
+
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  </script>
+
+
+</body>
+</html>
+
