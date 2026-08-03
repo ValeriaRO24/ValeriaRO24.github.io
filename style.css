@@ -385,14 +385,23 @@
   
   
   
-  .button-group {
+  .button-group,
+  .button-group-single {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
     flex-wrap: wrap;
-    
     position: relative;
     z-index: 1;
+  }
+
+  .button-group {
+    gap: 1.5rem;
+  }
+
+  .button-group-single {
+    margin-top: 1rem;
+    padding-top: 0.25rem;
+    width: 100%;
   }
   
   .external-button {
@@ -408,7 +417,16 @@
     font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 2px 6px rgba(115, 75, 94, 0.2);
-    text-align: center;  
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+  }
+
+  .external-button-wide {
+    width: calc(3 * 270px + 2 * 1.5rem);
+    max-width: calc(100% - 2rem);
   }
   
   .external-button:hover {
